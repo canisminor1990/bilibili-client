@@ -1,0 +1,16 @@
+{
+  "name": "bilibili-client",
+  "version": "1.0.0",
+  "productName": "Bilibili Client",
+  "description": "Mini client of bilibili.",
+  "main": "dist/main.js",
+  "author": {
+    "name": "CanisMinor",
+    "email": "i@canisminor.cc"
+  },
+  "dependencies": {
+    "electron-config": "^1.0.0",
+    "electron-is": "^2.4.0",
+    "electron-log": "^2.2.13"
+  }
+}
