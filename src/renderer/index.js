@@ -1,4 +1,5 @@
 import dva from 'dva';
+import createLoading from 'dva-loading';
 import createHistory from 'history/createBrowserHistory';
 import { message } from 'antd';
 import './index.scss';
@@ -15,6 +16,11 @@ const app = dva({
 });
 
 // 2. Plugins
+app.use(createLoading());
+
+// 3. Model
+app.model(require('./models/loading'));
+app.model(require('./models/history'));
 
 // 4. Router
 app.router(require('./router'));

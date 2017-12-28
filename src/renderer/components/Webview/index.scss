@@ -1,4 +1,8 @@
-.webview{
-	height: 100%;
-	//filter: blur(25px);
+.webview {
+  height: 100%;
+  filter: blur(0px);
+  //transition: 0.2s ease-out;
+}
+.loading {
+  filter: blur(25px);
 }

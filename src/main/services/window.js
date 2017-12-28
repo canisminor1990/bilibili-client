@@ -1,4 +1,3 @@
-import is from 'electron-is';
 import { join } from 'path';
 import { BrowserWindow } from 'electron';
 
@@ -19,7 +18,6 @@ export function getCount() {
 }
 
 export function getPath() {
-  let path = `file://${join($dirname, '..', 'pages')}/index.html`;
-  console.log(path)
+  const path = `file://${join($dirname, '..', 'pages')}/index.html`;
   return path;
 }

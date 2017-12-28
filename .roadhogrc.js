@@ -11,7 +11,10 @@ export default {
 	disableCSSModules  : false,
 	sass               : {
 		sourceMap   : process.env.NODE_ENV === 'development',
-		includePaths: ['node_modules', 'src/style']
+		includePaths: ['node_modules', 'src/renderer/style']
+	},
+	theme: {
+		"primary-color": "#f25d8e",
 	},
 	extraPostCSSPlugins: [
 		pxtorem({
@@ -21,6 +24,7 @@ export default {
 	],
 	extraBabelPlugins  : [
 		'transform-runtime',
+		'lodash',
 		[
 			'import',
 			[

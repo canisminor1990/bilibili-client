@@ -1,19 +1,37 @@
-import { Hide, AddStyle } from './utils';
+import { AddStyle } from '../utils';
 
-export default () => {
-	// language=SCSS
-	AddStyle(`
+export function style() {
+  // language=SCSS
+  AddStyle(`
 		.index__home__M-home-,
 		.index__partition__M-partition-,
 		.index__partBox__M-partition-secondZone- {
 			background: #fff;
 		}
+		.index__partBox__M-home-zone-,
+		.index__partBox__M-home-zoneAll-,
+		.index__partBox__M-partition-zone-,
+		.index__partBox__M-partition-zoneAll-{
+			top: 0 !important;
+		}
+		.index__partBox__M-home-zone-,
+		.index__partBox__M-home-zoneAll-,
+		.index__partBox__M-partition-zoneAll-{
+			top: 0 !important;
+			box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
+		}
+		.index__partBox__M-partition-secondZone-{
+			box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
+		}
+		.index__divider__M-home-{
+			padding-top: 2rem !important;
+		}
 		.index__line__M-partition- {
 			border-bottom: none !important;
+			padding-top: 4rem !important;
 		}
-		.index__show__M-home-zoneAll-,
-		.index__show__M-home-zoneAll- {
-			box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
+		.index__recommend__M-home-recommend- {
+			height: auto !important;
 		}
 		.index__content__M-home-recommend-,
 		.index__content__M-home-different-,
@@ -45,6 +63,7 @@ export default () => {
 		.index__item__M-commonComponent-Item- .index__imgContainer__M-commonComponent-Item- {
 			margin: 0;
 			width: 100%;
+			height: 4rem !important;
 			border-radius: 0;
 		}
 		.index__info__M-commonComponent-Item- {

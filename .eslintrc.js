@@ -44,5 +44,6 @@ module.exports = {
     'react/display-name': [0],
     'react/no-children-prop': [0],
 	  'no-undef': [0],
+	  'no-unused-vars': [1],
   }
 };

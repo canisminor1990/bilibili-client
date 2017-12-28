@@ -1,0 +1,74 @@
+@import 'import';
+$navHeight: 4rem;
+
+.window {
+  height: 100%;
+  position: relative;
+}
+.view {
+  transform: translate3d(0, $navHeight, 0);
+  height: calc(100% - #{$navHeight});
+  position: relative;
+}
+.viewAnimation {
+  height: 100%;
+  transition: 0.2s ease-in-out;
+  transform: translate3d(0, 0, 0);
+}
+
+.navbar {
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  height: $navHeight;
+}
+.navbarView {
+  background: $primary;
+  padding: 0 0.5rem;
+  transition: 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+.navbarAnimation {
+  &:hover {
+    .navbarView {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  .navbarView {
+    transform: translate3d(0, -$navHeight, 0);
+  }
+}
+.headerBar {
+  display: flex;
+  align-items: center;
+  height: 1.5rem;
+}
+.subBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 2.5rem;
+  padding-bottom: 0.2rem;
+}
+.logo {
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+.navicon {
+  font-size: 1.2rem;
+  color: #fff;
+  width: 1.8rem;
+  height: 1.8rem;
+  line-height: 1.8rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    background: rgba(#fff, 0.15);
+  }
+}
