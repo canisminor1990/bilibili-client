@@ -1,6 +1,6 @@
-import { AddStyle } from './utils';
+import { AddStyle } from '../utils';
 
-export default () => {
+export function load(){
 	// language=SCSS
 	AddStyle(`
 		html,body {

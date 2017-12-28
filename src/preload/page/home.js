@@ -1,6 +1,6 @@
-import { Hide, AddStyle } from './utils';
+import { Hide, AddStyle } from '../utils';
 
-export default () => {
+export function load() {
 	// language=SCSS
 	AddStyle(`
 		.index__home__M-home-,

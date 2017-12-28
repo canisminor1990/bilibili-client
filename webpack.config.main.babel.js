@@ -6,7 +6,7 @@ export default {
   target: 'electron',
   entry: {
     main: './src/main/index.js',
-	  preload: './src/shared/preload.js',
+	  preload: './src/preload/index.js',
   },
   output: {
     path: outputPath,
