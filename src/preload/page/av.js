@@ -1,8 +1,8 @@
 import { AddStyle } from '../utils';
 
 export function load() {
-	// language=SCSS
-	AddStyle(`
+  // language=SCSS
+  AddStyle(`
 		.bilibili-player-video-btn-widescreen {
 			display: none !important;
 		}
@@ -53,18 +53,18 @@ export function load() {
 			}
 		}
 	`);
-	window.onload = () => {
-		let history;
-		const partToggle = document.querySelector('.v-part-toggle');
-		if (partToggle) partToggle.click();
-		const fullscreen = setInterval(() => {
-			let url        = window.location.href;
-			let wideScreenButton = document.querySelector('.bilibili-player-iconfont-web-fullscreen');
-			if (history !== url && wideScreenButton) {
-				wideScreenButton.click();
-				history = url;
-			}
-		}, 50);
-		if (url.indexOf('video/av') === -1) clearInterval(fullscreen);
-	};
+  window.onload = () => {
+    let history;
+    const partToggle = document.querySelector('.v-part-toggle');
+    if (partToggle) partToggle.click();
+    const fullscreen = setInterval(() => {
+      let url = window.location.href;
+      let wideScreenButton = document.querySelector('.bilibili-player-iconfont-web-fullscreen');
+      if (history !== url && wideScreenButton) {
+        wideScreenButton.click();
+        history = url;
+      }
+    }, 50);
+    if (url.indexOf('video/av') === -1) clearInterval(fullscreen);
+  };
 }

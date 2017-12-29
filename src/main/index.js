@@ -13,45 +13,45 @@ log.info('=================================');
 log.info('main：start');
 
 if (is.dev()) {
-	require('electron-debug')(); // eslint-disable-line global-require
+  require('electron-debug')(); // eslint-disable-line global-require
 }
 
 app.on('ready', () => {
-	log.info(`main：root:Platform：${process.platform}`);
-	application.init();
-	menu.init();
+  log.info(`main：root:Platform：${process.platform}`);
+  application.init();
+  menu.init();
 
-	// 加载 devtools extension
-	if (is.dev()) {
-		BrowserWindow.addDevToolsExtension(join($dirname, '../../extensions/react-devtools/2.5.2_0'));
-		BrowserWindow.addDevToolsExtension(join($dirname, '../../extensions/redux-devtools/2.15.1_0'));
-	}
+  // 加载 devtools extension
+  if (is.dev()) {
+    BrowserWindow.addDevToolsExtension(join($dirname, '../../extensions/react-devtools/2.5.2_0'));
+    BrowserWindow.addDevToolsExtension(join($dirname, '../../extensions/redux-devtools/2.15.1_0'));
+  }
 });
 
 app.on('window-all-closed', () => {
-	if (process.platform !== 'darwin') {
-		app.quit();
-	}
+  if (process.platform !== 'darwin') {
+    app.quit();
+  }
 });
 
 app.on('activate', () => {
-	if (window.getCount() === 0) {
-		application.init();
-	}
+  if (window.getCount() === 0) {
+    application.init();
+  }
 });
 
 app.on('quit', () => {
-	log.info('main：stop');
-	log.info('=================================');
+  log.info('main：stop');
+  log.info('=================================');
 });
 
 // Register to global, so renderer can access these with remote.getGlobal
 
 global.services = {
-	application,
-	window
+  application,
+  window,
 };
 
-global.configs  = {
-	config
+global.configs = {
+  config,
 };

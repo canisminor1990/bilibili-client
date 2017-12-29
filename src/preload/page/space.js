@@ -1,8 +1,8 @@
 import { AddStyle } from '../utils';
 
 export function load() {
-	// language=SCSS
-	AddStyle(`
+  // language=SCSS
+  AddStyle(`
 		.index__banner__M-space-banner- img,
 		.index__exp__M-space-info- {
 			display: none !important;

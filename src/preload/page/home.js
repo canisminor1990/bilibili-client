@@ -1,8 +1,8 @@
-import { Hide, AddStyle } from '../utils';
+import { AddStyle } from '../utils';
 
 export function load() {
-	// language=SCSS
-	AddStyle(`
+  // language=SCSS
+  AddStyle(`
 		.index__home__M-home-,
 		.index__partition__M-partition-,
 		.index__partBox__M-partition-secondZone- {

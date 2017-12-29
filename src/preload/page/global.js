@@ -1,8 +1,8 @@
 import { AddStyle } from '../utils';
 
-export function load(){
-	// language=SCSS
-	AddStyle(`
+export function load() {
+  // language=SCSS
+  AddStyle(`
 		html,body {
 			-webkit-overflow-scrolling: touch;
 			overflow-x: hidden;
