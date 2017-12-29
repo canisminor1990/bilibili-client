@@ -1,11 +1,11 @@
 import { Route, Router, Switch } from 'dva/router';
-import IndexPage from './routes/IndexPage';
+import Main from './routes/main';
 
 export default ({ app, history }) => {
   return (
     <Router history={history}>
       <Switch>
-        <Route path="/" component={IndexPage} />
+        <Route path="/" component={Main} />
       </Switch>
     </Router>
   );

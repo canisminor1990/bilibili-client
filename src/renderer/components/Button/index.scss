@@ -1,0 +1,28 @@
+@import 'import';
+.button {
+  display: block;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.4;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  + .button {
+    margin-left: 0.4rem;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+}
+.disable {
+  opacity: 0.2 !important;
+}
+.icon {
+  font-size: 14px;
+  color: #fff;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+}

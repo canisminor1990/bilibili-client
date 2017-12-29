@@ -15,11 +15,17 @@ export function load() {
 			border:3px solid #fff;
 			box-shadow: 0 4px 8px rgba(0,0,0,.1);
 		}
+		.index__divider__M-space-{
+			background: #f25d8e;
+			padding-top: 1.3rem !important;
+		}
 		.index__space__M-space- {
 			background: #fff;
 		}
 		.index__banner__M-space-banner- {
-			background: #fb7299;
+			margin:0;
+			padding: 0;
+			background: #f25d8e;
 			height: 3rem;
 		}
 		.index__info__M-space-info-{

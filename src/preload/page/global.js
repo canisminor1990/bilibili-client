@@ -3,7 +3,7 @@ import { AddStyle } from '../utils';
 export function load() {
   // language=SCSS
   AddStyle(`
-		html,body {
+		html, body {
 			-webkit-overflow-scrolling: touch;
 			overflow-x: hidden;
 			background: #fff;
@@ -26,7 +26,7 @@ export function load() {
 			border-radius: 0;
 			box-shadow: none;
 			&:hover {
-				background: #fb7299;
+				background: #f25d8e;
 			}
 		}
 		.index__banner__M-home-slider-,
@@ -34,28 +34,14 @@ export function load() {
 		.index__footer__M-space-footer-,
 		.index__law__M-home-,
 		.index__law__M-partition-,
+		.index__topArea__M-commonComponent-topArea-,
 		#toTop,
 		#floatBtn,
 		#openAppBtn {
 			display: none !important;
 		}
-		.index__topArea__M-commonComponent-topArea- {
-			background: #fb7299;
-		}
 		.index__icon__M-commonComponent-topArea- {
 			fill: #fff !important;
-		}
-		.index__logo__M-commonComponent-topArea- {
-			display: none !important;
-		}
-		.index__mySpace__M-commonComponent-topArea- {
-			position: absolute !important;
-			left: .5rem !important;
-			border:1px solid #fff;
-		}
-		.index__searchIcon__M-commonComponent-topArea-{
-			position: absolute !important;
-			right: .5rem !important;
 		}
 	`);
 }
