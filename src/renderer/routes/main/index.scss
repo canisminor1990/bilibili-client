@@ -18,7 +18,6 @@ $navHeight: 4rem;
 
 .navbar {
   -webkit-user-select: none;
-  -webkit-app-region: drag;
   position: fixed;
   top: 0;
   left: 0;
@@ -47,6 +46,12 @@ $navHeight: 4rem;
   display: flex;
   align-items: center;
   height: 1.5rem;
+  position: relative;
+}
+.drag {
+  -webkit-app-region: drag;
+  height: 100%;
+  flex: 1;
 }
 .subBar {
   display: flex;
@@ -71,4 +76,16 @@ $navHeight: 4rem;
   &:hover {
     background: rgba(#fff, 0.15);
   }
+  + .navicon {
+    margin-left: 0.2rem;
+  }
+}
+.left,
+.right {
+  width: 5rem;
+  display: flex;
+  align-items: center;
+}
+.right {
+  justify-content: flex-end;
 }

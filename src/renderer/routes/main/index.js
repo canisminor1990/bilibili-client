@@ -82,6 +82,15 @@ class Main extends Component {
       />
     );
 
+    const Dynamic = (
+      <Icon
+        className={style.navicon}
+        type="heart-o"
+        onClick={() => this.history.go('https://www.bilibili.com/account/dynamic')}
+        antd
+      />
+    );
+
     return (
       <div className={style.window}>
         <div
@@ -93,11 +102,15 @@ class Main extends Component {
               {Exit}
               {GoBack}
               {GoForward}
+              <div className={style.drag} />
             </div>
             <div className={style.subBar}>
               <div className={style.left}>{Space}</div>
               {Logo}
-              <div className={style.right}>{Search}</div>
+              <div className={style.right}>
+                {Dynamic}
+                {Search}
+              </div>
             </div>
           </div>
         </div>

@@ -2,33 +2,53 @@ import { ipcRenderer as ipc } from 'electron';
 import * as global from './page/global';
 import * as home from './page/home';
 import * as av from './page/av';
+import * as bangumi from './page/bangumi';
+import * as dynamic from './page/dynamic';
 import * as space from './page/space';
+import { isHome, isAv, isBangumi, isSpace, isDynamic } from './utils';
 
 window.addEventListener('DOMContentLoaded', () => {
-  global.load();
+  const url = window.location.href;
+  global.style();
   // 首页、分区首页
-  if (
-    /bilibili\.com\/index\.html$/.test(window.location.href) ||
-    /\/channel\/\d+\.html$/.test(window.location.href)
-  ) {
+  if (isHome(url)) {
     home.style();
-  }
-
-  // 视频页
-  if (
-    window.location.href.indexOf('video/av') > -1 ||
-    window.location.href.indexOf('html5player.html') > -1
-  ) {
-    av.style();
-    av.init();
-    ipc.send('video-on');
-    window.addEventListener('resize', () => ipc.send('resize'));
-  } else {
-    ipc.send('video-off');
+    console.log('[preload] Home Load');
   }
 
   // 我的
-  if (window.location.href.indexOf('bilibili.com/space') > -1) {
+  if (isSpace(url)) {
     space.style();
+    space.init();
+    console.log('[preload] Space Load');
+  }
+
+  // 动态
+  if (isDynamic(url)) {
+    dynamic.style();
+    dynamic.init();
+    console.log('[preload] Dynamic Load');
+  }
+
+  // 视频页
+  if (isAv(url)) {
+    av.style();
+    av.init();
+    console.log('[preload] Av Load');
+  }
+
+  // 番剧页
+  if (isBangumi(url)) {
+    bangumi.style();
+    bangumi.init();
+    console.log('[preload] Bangumi Load');
+  }
+
+  // 缩放控制
+  if (!isAv(url) && !isBangumi(url)) {
+    ipc.send('video-off');
+  } else {
+    ipc.send('video-on');
+    window.addEventListener('resize', () => ipc.send('resize'));
   }
 });
