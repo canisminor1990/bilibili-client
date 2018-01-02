@@ -1,6 +1,6 @@
 # Bilibili Clinet
 
-![](http://qn.canisminor.cc/2018-01-02-banner.png)
+![](https://github.com/canisminor1990/bilibili-client/blob/master/doc/banner.png?raw=true)
 
 [![](https://img.shields.io/github/release/canisminor1990/bilibili-client.svg)](https://github.com/canisminor1990/bilibili-client)
 [![](https://img.shields.io/github/downloads/canisminor1990/bilibili-client/total.svg)](https://github.com/canisminor1990/bilibili-client/releases)
@@ -19,9 +19,9 @@
 
 ## Preview
 
-![](http://qn.canisminor.cc/2018-01-02-preview-1.png)
-![](http://qn.canisminor.cc/2018-01-02-preview-2.png)
-![](http://qn.canisminor.cc/2018-01-02-preview-3.png)
+![](https://github.com/canisminor1990/bilibili-client/blob/master/doc/preview-1.png?raw=true)
+![](https://github.com/canisminor1990/bilibili-client/blob/master/doc/preview-2.png?raw=true)
+![](https://github.com/canisminor1990/bilibili-client/blob/master/doc/preview-3.png?raw=true)
 
 ## Download
 
