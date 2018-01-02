@@ -20,7 +20,9 @@
 
 ## Download
 
-[![](https://img.shields.io/badge/bilibili-download-green.svg?style=for-the-badge)](https://github.com/canisminor1990/bilibili-client/releases)
+点击下方按钮前往releases，下载最新版 `bilibili.app.zip`
+
+[![](https://img.shields.io/badge/bilibili-download-ff69b4.svg?style=for-the-badge)](https://github.com/canisminor1990/bilibili-client/releases)
 
 ## Copyright
 
