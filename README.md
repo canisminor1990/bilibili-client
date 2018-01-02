@@ -20,7 +20,7 @@
 
 ## Download
 
-[![](https://img.shields.io/badge/bilibili-download-green.svg?style=for-the-badge)](https://img.shields.io/github/downloads/canisminor1990/bilibili-client/total.svg)](https://github.com/canisminor1990/bilibili-client/releases)
+[![](https://img.shields.io/badge/bilibili-download-green.svg?style=for-the-badge)](https://github.com/canisminor1990/bilibili-client/releases)
 
 ## Copyright
 
