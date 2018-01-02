@@ -10,3 +10,7 @@ app/dist
 app/pages
 
 # logs
+npm-debug.log
+package-lock.json
+yarn.lock
+yarn-error.log
