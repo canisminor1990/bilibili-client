@@ -8,8 +8,6 @@ import * as window from './services/window';
 import * as menu from './services/menu';
 import * as config from './configs/config';
 
-log.transports.file.level = 'info';
-
 log.info('=================================');
 log.info('main：start');
 
@@ -19,6 +17,7 @@ app.on('ready', () => {
   log.info(`main：root:Platform：${process.platform}`);
   application.init();
   menu.init();
+  application.checkUpdate();
   // 加载 devtools extension
   if (is.dev()) {
     BrowserWindow.addDevToolsExtension(join($dirname, '../../extensions/react-devtools/2.5.2_0'));

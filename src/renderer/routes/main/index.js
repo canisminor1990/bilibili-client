@@ -2,7 +2,8 @@ import { connect } from 'dva';
 import { Component } from 'react';
 import { ipcRenderer as ipc } from 'electron';
 import { Loading, Webview, Button, Icon } from '../../components/index';
-import { userAgent, videoUrlPrefix, bangumiUrl } from './utils';
+import { Log, UserAgent, VideoUrlPrefix, BangumiUrl } from '../../utils';
+import classnames from 'classnames/bind';
 import style from './index.scss';
 
 let wv;
@@ -15,20 +16,20 @@ const State = state => ({
 class Main extends Component {
   state = {
     key: 0,
+    inVideo: false,
   };
 
   componentWillMount() {
     window.addEventListener('DOMContentLoaded', () => {
       wv = document.getElementById('wv');
       // console转发
-      wv.addEventListener('console-message', content => console.log(content.message));
+      wv.addEventListener('console-message', content => Log(content.message));
       // 使用history负责跳转
       wv.addEventListener('will-navigate', e => {
         this.history.go(e.url);
       });
       // 载入完成
       wv.addEventListener('did-finish-load', () => {
-        // console.log(wv.getURL());
         this.loading(false);
       });
     });
@@ -83,19 +84,24 @@ class Main extends Component {
 
     return (
       <div className={style.window}>
-        <div className={style.navbar} key={this.state.key}>
-          <div className={style.headerBar}>
-            {Exit}
-            {GoBack}
-            {GoForward}
-          </div>
-          <div className={style.subBar}>
-            <div className={style.left}>{Space}</div>
-            {Logo}
-            <div className={style.right}>{Search}</div>
+        <div
+          className={classnames.bind(style)('navbar', { navbarAnimation: this.state.inVideo })}
+          key={this.state.key}
+        >
+          <div className={style.navbarView}>
+            <div className={style.headerBar}>
+              {Exit}
+              {GoBack}
+              {GoForward}
+            </div>
+            <div className={style.subBar}>
+              <div className={style.left}>{Space}</div>
+              {Logo}
+              <div className={style.right}>{Search}</div>
+            </div>
           </div>
         </div>
-        <div className={style.view}>
+        <div className={classnames.bind(style)('view', { viewAnimation: this.state.inVideo })}>
           <Loading loading={$.loading} />
           <Webview loading={$.loading} />
         </div>
@@ -113,14 +119,16 @@ class Main extends Component {
     go: (url, noNewHistory) => {
       let match, goUrl;
       if ((match = /video\/av(\d+(?:\/index_\d+\.html)?(?:\/#page=\d+)?)/.exec(url))) {
-        goUrl = videoUrlPrefix + match[1];
-        wv.loadURL(goUrl, { userAgent: userAgent.desktop });
+        goUrl = VideoUrlPrefix + match[1];
+        wv.loadURL(goUrl, { userAgent: UserAgent.desktop });
+        this.setState({ inVideo: true });
       } else {
         goUrl = url;
-        wv.loadURL(goUrl, { userAgent: userAgent.mobile });
+        wv.loadURL(goUrl, { userAgent: UserAgent.mobile });
+        this.setState({ inVideo: false });
       }
       !noNewHistory && this.history.add(goUrl);
-      console.log('[history]', 'go', goUrl);
+      Log(`[history] go ${goUrl}`);
       this.loading(true);
     },
     goBack: () => {

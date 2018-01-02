@@ -7,6 +7,10 @@
     "email": "i@canisminor.cc"
   },
   "license": "MIT",
+  "repository": [
+    "git@github.com:canisminor1990/bilibili-client.git",
+    "git@git.coding.net:canisminor1990/bilibili-client.git"
+  ],
   "scripts": {
     "start": "electron app/dist/main",
     "dev": "concurrently \"yarn dev:roadhog\" \"yarn dev:main\"",
@@ -67,6 +71,7 @@
     "electron": "^1.7.10",
     "electron-builder": "^19.49.2",
     "electron-debug": "^1.4.0",
+    "electron-fetch": "^1.1.0",
     "electron-is-accelerator": "^0.1.2",
     "electron-rebuild": "^1.6.0",
     "electron-store": "^1.3.0",

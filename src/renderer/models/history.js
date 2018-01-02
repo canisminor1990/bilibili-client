@@ -1,3 +1,4 @@
+import { Log } from '../utils';
 import _ from 'lodash';
 
 export default {
@@ -19,13 +20,13 @@ export default {
       }
       history.stack.push(url);
       history.pos = history.stack.length - 1;
-      console.log('[history]', 'add', history);
+      Log(`[history] add ${url}`);
       yield put({ type: 'save', payload: history });
     },
     *pos({ payload: num }, { put, select }) {
       const history = yield select(state => state.history);
       history.pos = num;
-      console.log('[history]', 'pos', num);
+      Log(`[history] pos ${num}`);
       yield put({ type: 'save', payload: history });
     },
   },
