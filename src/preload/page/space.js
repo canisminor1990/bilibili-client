@@ -7,6 +7,9 @@ export function style() {
 		.index__exp__M-space-info- {
 			display: none !important;
 		}
+		.index__personal__M-space-personal-{
+			z-index: 999999 !important;
+		}
 		.index__face__M-space-info- {
 			left: calc(50% - 1.5rem) !important;
 			width: 3rem !important;

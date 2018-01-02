@@ -1,9 +1,9 @@
 import { AddStyle } from '../utils';
-import { ipcRenderer as ipc } from 'electron';
 
 export function style() {
   // language=SCSS
   AddStyle(`
+	  .bilibili-player-video-btn-fullscreen,
 		.bilibili-player-video-btn-widescreen {
 			display: none !important;
 		}
@@ -95,7 +95,6 @@ export function style() {
 			color: #6d757a;
 		}
 		@media (max-width: 480px) {
-			.bilibili-player-video-btn-fullscreen,
 			.bilibili-player-video-btn-repeat,
 			.bilibili-player-video-btn-quality,
 			.bilibili-player-video-btn-volume {
@@ -119,10 +118,11 @@ export function style() {
 export function init() {
   window.onload = () => {
     let history;
+    let url = window.location.href;
     const partToggle = document.querySelector('.v-part-toggle');
     if (partToggle) partToggle.click();
     const fullscreen = setInterval(() => {
-      const url = window.location.href;
+      url = window.location.href;
       const wideScreenButton = document.querySelector('.bilibili-player-iconfont-web-fullscreen');
       if (history !== url && wideScreenButton) {
         SelectPart();
@@ -139,9 +139,8 @@ const SelectPart = () => {
     const selectPart = `
 			<div class="bilibili-player-iconfont" id="selectPart" data-text="分P">P</div>
 		`;
-    $('.bilibili-player-video-btn-danmaku').after(selectPart);
+    $('.bilibili-player-video-btn-danmaku').before(selectPart);
   }
-  $('#plist > a').bind('click', () => $('.v-plist').fadeOut());
-  $('#plist > .curPage').bind('click', () => $('.v-plist').fadeOut());
+  $('#plist').bind('click', () => $('.v-plist').fadeOut());
   $('#selectPart').bind('click', () => $('.v-plist').fadeIn());
 };
