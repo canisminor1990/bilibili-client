@@ -72,6 +72,10 @@ $ yarn pack:osx
 $ yarn pack:win
 ```
 
+## License
+
+[MIT](https://tldrlegal.com/license/mit-license)
+
 ## Copyright
 
 - **Author:** [canisminor1990](https://github.com/canisminor1990)
