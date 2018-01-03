@@ -19,7 +19,6 @@
 		"build"        : "yarn build:roadhog && yarn build:main",
 		"build:roadhog": "roadhog build",
 		"build:main"   : "webpack --config ./webpack.config.main.babel.js",
-		"rebuild"      : "electron-rebuild -m ./app",
 		"lint"         : "lint-staged",
 		"lint:es"      : "eslint --fix --ext .js src",
 		"pack:base"    : "electron-packager ./app bilibili --arch=x64 --out ./dist --icon=./build/icon --overwrite --asar --prune",

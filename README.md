@@ -29,6 +29,31 @@
 
 [![](https://img.shields.io/badge/bilibili-download-ff69b4.svg?style=for-the-badge)](https://github.com/canisminor1990/bilibili-client/releases)
 
+## Develop
+
+`electron` `react` `dva` `roadhog` `webpack`
+
+- 结构参考 [dva-boilerplate-electron](https://github.com/sorrycc/dva-boilerplate-electron)
+
+### Dev
+
+```sh
+# 窗口一：watch roadhog => pages / webpack => main
+$ yarn dev
+# 窗口二：start electron
+$ yarn start
+```
+
+#### Build
+
+```sh
+$ yarn build
+# MacOS
+$ yarn pack:osx
+# Windows
+$ yarn pack:win
+```
+
 ## Copyright
 
 - **Author:** [canisminor1990](https://github.com/canisminor1990)
