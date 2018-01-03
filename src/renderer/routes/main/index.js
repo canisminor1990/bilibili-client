@@ -102,6 +102,7 @@ class Main extends Component {
               {Exit}
               {GoBack}
               {GoForward}
+              <div className={style.drag} />
             </div>
             <div className={style.subBar}>
               <div className={style.left}>{Space}</div>

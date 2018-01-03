@@ -5,7 +5,7 @@
 [![](https://img.shields.io/github/release/canisminor1990/bilibili-client.svg)](https://github.com/canisminor1990/bilibili-client)
 [![](https://img.shields.io/github/downloads/canisminor1990/bilibili-client/total.svg)](https://github.com/canisminor1990/bilibili-client/releases)
 
-📺 可以摸鱼的 Bilibili MaxOS 客户端
+📺 可以摸鱼的 Bilibili Max/Win 客户端
 
 ## Features
 
@@ -13,8 +13,7 @@
 - [x] 置顶功能
 - [x] 无边框播放器
 - [x] 分P支持
-- [x] Mac客户端
-- [ ] Win客户端
+- [x] Mac/Win客户端
 - [ ] 快捷键
 - [ ] ...
 
