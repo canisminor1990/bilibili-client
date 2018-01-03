@@ -16,7 +16,7 @@
 - [x] Mac客户端
 - [ ] Win客户端
 - [ ] 快捷键
-- ...
+- [ ] ...
 
 ## Preview
 
@@ -49,7 +49,7 @@
 + src             // 源码
   + main          // main
   + renderer      // renderer
-  + preload        // webview部分的preload
+  + preload       // webview部分的preload
 - package.json    // 开发依赖，存 devDependencies
 ```
 
