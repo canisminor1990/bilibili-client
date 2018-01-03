@@ -34,7 +34,7 @@
 
 |Date|Versiton|Changelog|
 |---|---|---|
-|2018.1.3|v1.0.1|/兼容番剧/修复分P等Bug|
+|2018.1.3|v1.0.1|添加动态/兼容番剧/修复分P等Bug|
 |2018.1.2|v1.0.0|Early Access|
 
 ## Develop
