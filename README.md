@@ -1,11 +1,11 @@
-# Bilibili Clinet
+# Bilibili Mini-Clinet
 
 ![](https://github.com/canisminor1990/bilibili-client/blob/master/doc/preview-0.png?raw=true)
 
 [![](https://img.shields.io/github/release/canisminor1990/bilibili-client.svg)](https://github.com/canisminor1990/bilibili-client)
 [![](https://img.shields.io/github/downloads/canisminor1990/bilibili-client/total.svg)](https://github.com/canisminor1990/bilibili-client/releases)
 
-📺 可以摸鱼的 Bilibili Mac/Win 客户端
+📺 可以摸鱼的 Bilibili Mini-Clinet # 支持Mac/Win
 
 ## Features
 
