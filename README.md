@@ -16,6 +16,7 @@
 - [x] Mac客户端
 - [ ] Win客户端
 - [ ] 快捷键
+- ...
 
 ## Preview
 
@@ -35,6 +36,23 @@
 
 - 结构参考 [dva-boilerplate-electron](https://github.com/sorrycc/dva-boilerplate-electron)
 
+### Directory Structure
+
+```js
++ dist            // pack 完后的输出，.dmg, .exe, .zip, .app 等文件
++ build           // icon.icns, icon.ico
++ app             // 用于 pack 的目录
+  + dist          // main/preload 打包完放这里
+  + assets        // 字体、图片等资源文件
+  + pages         // 存放页面
+  - package.json  // 生产依赖，存 dependencies
++ src             // 源码
+  + main          // main
+  + renderer      // renderer
+  + preload        // webview部分的preload
+- package.json    // 开发依赖，存 devDependencies
+```
+
 ### Dev
 
 ```sh
@@ -44,7 +62,7 @@ $ yarn dev
 $ yarn start
 ```
 
-#### Build
+### Build
 
 ```sh
 $ yarn build

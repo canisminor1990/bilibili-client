@@ -9,6 +9,7 @@ dist
 app/dist
 app/pages
 *.sketch
+publish.sh
 
 # logs
 npm-debug.log

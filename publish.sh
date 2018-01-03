@@ -1,0 +1,1 @@
+electron-release --app=dist/bilibili-darwin-x64/bilibili.app --token=8d5956a4d0ceacf30781ff3aa4c5b62864d5d0e4
