@@ -1,4 +1,4 @@
-import { AddStyle } from '../utils';
+import { AddStyle, isDynamic } from '../utils';
 
 export function style() {
   // language=SCSS
@@ -28,6 +28,23 @@ export function style() {
 	  .stm-ly{
 		  margin: 0;
 	  }
-	  
 	`);
+}
+
+export function init() {
+  $(() => {
+    let history;
+    let url = window.location.href;
+    const timeout = 50;
+    const fullscreen = setInterval(() => {
+      url = window.location.href;
+      if (history !== url) {
+        $('a').bind('click', function() {
+          window.location.href = this.href;
+        });
+        history = url;
+      }
+    }, timeout);
+    if (!isDynamic(url)) clearInterval(fullscreen);
+  });
 }

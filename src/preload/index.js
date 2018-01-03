@@ -23,17 +23,18 @@ window.addEventListener('DOMContentLoaded', () => {
     console.log('[preload] Space Load');
   }
 
+  // 动态
+  if (isDynamic(url)) {
+    dynamic.style();
+    dynamic.init();
+    console.log('[preload] Dynamic Load');
+  }
+
   // 视频页
   if (isAv(url)) {
     av.style();
     av.init();
     console.log('[preload] Av Load');
-  }
-
-  // 视频页
-  if (isDynamic(url)) {
-    dynamic.style();
-    console.log('[preload] Dynamic Load');
   }
 
   // 番剧页
