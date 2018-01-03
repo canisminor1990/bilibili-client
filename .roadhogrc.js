@@ -4,7 +4,6 @@ import pxtorem from 'postcss-pxtorem';
 export default {
 	entry              : './src/renderer/index.js',
 	outputPath         : './app/pages',
-	publicPath: '/',
 	define             : {
 		'$dirname': '__dirname'
 	},

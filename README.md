@@ -30,6 +30,13 @@
 
 [![](https://img.shields.io/badge/bilibili-download-ff69b4.svg?style=for-the-badge)](https://github.com/canisminor1990/bilibili-client/releases)
 
+## ChangeLog
+
+|Date|Versiton|Changelog|
+|---|---|---|
+|2018.1.3|v1.0.1|修复分P等Bug,兼容番剧|
+|2018.1.2|v1.0.0|Early Access|
+
 ## Develop
 
 `electron` `react` `dva` `roadhog` `webpack`
