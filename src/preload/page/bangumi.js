@@ -66,7 +66,7 @@ const SelectPart = playerIframe => {
     const selectPart = `
 			<div class="bilibili-player-iconfont" id="selectPart" data-text="分P">P</div>
 		`;
-    $('.bilibili-player-video-btn-danmaku', playerIframe).before(selectPart);
+    $('.bilibili-player-video-btn-quality', playerIframe).after(selectPart);
   }
   $('.episode-item.on').bind('click', () => $('.bangumi-list-wrapper').fadeOut());
   $('#selectPart', playerIframe).bind('click', () => $('.bangumi-list-wrapper').fadeIn());

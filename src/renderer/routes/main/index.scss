@@ -71,4 +71,16 @@ $navHeight: 4rem;
   &:hover {
     background: rgba(#fff, 0.15);
   }
+  + .navicon {
+    margin-left: 0.2rem;
+  }
+}
+.left,
+.right {
+  width: 5rem;
+  display: flex;
+  align-items: center;
+}
+.right {
+  justify-content: flex-end;
 }

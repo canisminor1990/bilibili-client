@@ -28,7 +28,7 @@ const SelectPart = () => {
     const selectPart = `
 			<div class="bilibili-player-iconfont" id="selectPart" data-text="分P">P</div>
 		`;
-    $('.bilibili-player-video-btn-danmaku').before(selectPart);
+    $('.bilibili-player-video-btn-quality').after(selectPart);
   }
   $('.curPage').bind('click', () => $('.v-plist').fadeOut());
   $('#selectPart').bind('click', () => $('.v-plist').fadeIn());

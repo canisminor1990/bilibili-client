@@ -3,8 +3,9 @@ import * as global from './page/global';
 import * as home from './page/home';
 import * as av from './page/av';
 import * as bangumi from './page/bangumi';
+import * as dynamic from './page/dynamic';
 import * as space from './page/space';
-import { isHome, isAv, isBangumi, isSpace } from './utils';
+import { isHome, isAv, isBangumi, isSpace, isDynamic } from './utils';
 
 window.addEventListener('DOMContentLoaded', () => {
   const url = window.location.href;
@@ -27,6 +28,12 @@ window.addEventListener('DOMContentLoaded', () => {
     av.style();
     av.init();
     console.log('[preload] Av Load');
+  }
+
+  // 视频页
+  if (isDynamic(url)) {
+    dynamic.style();
+    console.log('[preload] Dynamic Load');
   }
 
   // 番剧页
