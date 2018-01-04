@@ -1,0 +1,48 @@
+@import 'import';
+.band {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 24rem;
+}
+.info {
+  color: #666;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(#000, 0.1);
+}
+.copyright {
+  color: #ccc;
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+}
+.logo {
+  width: 8rem;
+  height: 8rem;
+  margin-bottom: 0.5rem;
+}
+.text {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.version {
+  font-size: 0.9rem;
+  color: #999;
+  > span {
+    color: $c-primary;
+    font-weight: 800;
+  }
+}
+.split {
+  width: 100%;
+  height: 1px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background: #f8f8f8;
+}

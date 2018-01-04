@@ -1,0 +1,45 @@
+@import 'import';
+@import 'scroll';
+html,
+body {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+  background: #fff;
+}
+body {
+}
+a:focus {
+  text-decoration: none;
+}
+*:focus {
+  outline: none;
+}
+* {
+  -webkit-font-smoothing: antialiased;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: $font-family !important;
+}
+#preload {
+  .index__banner__M-home-slider-,
+  .index__openBtn__M-commonComponent-openBtn-,
+  .index__footer__M-space-footer-,
+  .index__law__M-home-,
+  .index__law__M-partition-,
+  .index__topArea__M-commonComponent-topArea-,
+  #toTop,
+  #floatBtn,
+  #openAppBtn {
+    display: none !important;
+  }
+  .index__icon__M-commonComponent-topArea- {
+    fill: #fff;
+  }
+}

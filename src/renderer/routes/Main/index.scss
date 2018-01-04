@@ -1,0 +1,18 @@
+@import 'import';
+$navHeight: 4rem;
+
+.view {
+  transform: translate3d(0, $navHeight, 0);
+  height: calc(100% - #{$navHeight});
+  position: relative;
+}
+.viewAnimation {
+  height: 100%;
+  transition: 0.2s ease-in-out;
+  transform: translate3d(0, 0, 0);
+}
+
+.logo {
+  font-size: 1.4rem;
+  cursor: pointer;
+}

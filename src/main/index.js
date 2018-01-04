@@ -1,27 +1,24 @@
 import { app, BrowserWindow } from 'electron';
 import is from 'electron-is';
 import { join } from 'path';
-import log from 'electron-log';
+import { Log } from './utils';
 import debug from 'electron-debug';
-import * as application from './services/application';
+import * as application from './services/app';
 import * as window from './services/window';
-import * as menu from './services/menu';
 import * as config from './configs/config';
 
-log.info('=================================');
-log.info('main：start');
+Log('[app] start 😘');
 
 if (is.dev()) debug();
 
 app.on('ready', () => {
-  log.info(`main：root:Platform：${process.platform}`);
+  Log('[app][platform]', process.platform, 1, 2, 3);
   application.init();
-  menu.init();
-  application.checkUpdate();
   // 加载 devtools extension
   if (is.dev()) {
-    BrowserWindow.addDevToolsExtension(join($dirname, '../../extensions/react-devtools/2.5.2_0'));
-    BrowserWindow.addDevToolsExtension(join($dirname, '../../extensions/redux-devtools/2.15.1_0'));
+    const exPath = '../../extensions';
+    BrowserWindow.addDevToolsExtension(join($dirname, exPath, 'react-devtools/2.5.2_0'));
+    BrowserWindow.addDevToolsExtension(join($dirname, exPath, 'redux-devtools/2.15.1_0'));
   }
 });
 
@@ -38,12 +35,10 @@ app.on('activate', () => {
 });
 
 app.on('quit', () => {
-  log.info('main：stop');
-  log.info('=================================');
+  Log('[app] quit');
 });
 
 // Register to global, so renderer can access these with remote.getGlobal
-
 global.services = {
   application,
   window,

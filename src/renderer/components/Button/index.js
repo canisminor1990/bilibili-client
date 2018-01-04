@@ -9,7 +9,7 @@ export default ({ className, mini, type, disable, ...other }) => {
     disable: disable,
   });
   return (
-    <div key={type} className={iconClass} {...other}>
+    <div className={iconClass} {...other}>
       <Icon className={style.icon} type={type} />
     </div>
   );

@@ -1,0 +1,81 @@
+@import 'import';
+#preload {
+  .index__banner__M-space-banner- img,
+  .index__exp__M-space-info-,
+  .index__call__M-space-info-,
+  .index__tabs__M-space-masterpiece-tabs- {
+    display: none !important;
+  }
+  .index__imgContainer__M-space-historyItem- {
+    border-radius: 2px;
+  }
+  .index__personal__M-space-personal- {
+    z-index: 99999;
+    opacity: 0;
+  }
+  .index__face__M-space-info- {
+    left: calc(50% - 1.5rem);
+    width: 3rem;
+    height: 3rem;
+    top: -4rem;
+    border: 3px solid #fff;
+    box-shadow: $bar-shadow;
+  }
+  .index__big__M-space-info- {
+    left: 9rem;
+    top: -1.8rem;
+  }
+  .index__divider__M-space- {
+    background: $c-primary;
+    padding-top: 1.3rem;
+  }
+  .index__space__M-space- {
+    background: #fff;
+  }
+  .index__banner__M-space-banner- {
+    margin: 0;
+    padding: 0;
+    background: $c-primary;
+    height: 3rem;
+  }
+  .index__info__M-space-info- {
+    z-index: 999;
+  }
+  .index__login__M-space-banner- {
+    border: 1px solid #fff;
+  }
+  .index__tabs__M-space-masterpiece-tabs- {
+    background: #f8f8f8;
+  }
+  .index__item__M-space-videoItem- {
+    border: none;
+  }
+  .index__tabs__M-space-tabs- {
+    border: none;
+    box-shadow: $bar-shadow;
+    z-index: 99;
+    cursor: pointer;
+  }
+  .index__nameField__M-space-info- {
+    padding-top: 0.5rem;
+  }
+  .index__loadMore__M-space-masterpiece-videoBoard-,
+  .index__loadMore__M-space-history- {
+    background: #f8f8f8;
+    cursor: pointer;
+  }
+  .index__myInfo__M-space-info- {
+    cursor: pointer;
+  }
+  .index__loginField__M-space-banner- {
+    height: 1.5rem;
+    top: 0;
+  }
+  .index__register__M-space-banner-,
+  .index__login__M-space-banner- {
+    width: 3.8rem;
+    > a {
+      line-height: 1.5rem;
+    }
+  }
+}

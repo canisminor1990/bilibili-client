@@ -1,0 +1,26 @@
+@import 'import';
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+  background: rgba(#ccc, 0.1);
+  height: 0;
+  width: 0;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  background: rgba(#ccc, 0.5);
+  border-radius: 0;
+  box-shadow: none;
+
+  &:hover {
+    background: $c-primary;
+  }
+}

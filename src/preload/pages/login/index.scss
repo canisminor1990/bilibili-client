@@ -1,0 +1,42 @@
+@import 'import';
+html,
+body {
+  height: 100%;
+}
+#preload {
+  header {
+    border: none;
+    box-shadow: $bar-shadow;
+  }
+  .input-wrp {
+    overflow: visible;
+    border-color: #eee;
+  }
+  .sns {
+    .title {
+      background: #fff;
+    }
+    a {
+      border-radius: 50%;
+      width: 3rem;
+      height: 3rem;
+      background-size: 100%;
+      padding: 0;
+      margin: 0.5rem;
+      background-position: center;
+    }
+  }
+
+  .btn,
+  .button {
+    border-color: $c-primary;
+    color: $c-primary;
+    &.btn-login,
+    &.confirm {
+      border: none;
+      background: linear-gradient(45deg, $c-primary, lighten($c-primary, 10%));
+      color: #fff;
+      box-shadow: 0 4px 8px rgba($c-primary, 0.15);
+    }
+  }
+}

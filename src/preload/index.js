@@ -1,51 +1,59 @@
 import { ipcRenderer as ipc } from 'electron';
-import * as global from './page/global';
-import * as home from './page/home';
-import * as av from './page/av';
-import * as bangumi from './page/bangumi';
-import * as dynamic from './page/dynamic';
-import * as space from './page/space';
-import { isHome, isAv, isBangumi, isSpace, isDynamic } from './utils';
+import * as global from './pages/global';
+import * as home from './pages/home';
+import * as av from './pages/av';
+import * as bangumi from './pages/bangumi';
+import * as dynamic from './pages/dynamic';
+import * as space from './pages/space';
+import * as login from './pages/login';
+import { is } from './utils';
 
 window.addEventListener('DOMContentLoaded', () => {
   const url = window.location.href;
   global.style();
   // 首页、分区首页
-  if (isHome(url)) {
+  if (is.Home(url)) {
     home.style();
     console.log('[preload] Home Load');
   }
 
   // 我的
-  if (isSpace(url)) {
+  if (is.Space(url)) {
     space.style();
     space.init();
     console.log('[preload] Space Load');
   }
 
   // 动态
-  if (isDynamic(url)) {
+  if (is.Dynamic(url)) {
     dynamic.style();
     dynamic.init();
     console.log('[preload] Dynamic Load');
   }
 
+  // 登陆
+
+  if (is.Login(url)) {
+    login.style();
+    console.log('[preload] Login Load');
+  }
+
   // 视频页
-  if (isAv(url)) {
+  if (is.Av(url)) {
     av.style();
     av.init();
     console.log('[preload] Av Load');
   }
 
   // 番剧页
-  if (isBangumi(url)) {
+  if (is.Bangumi(url)) {
     bangumi.style();
     bangumi.init();
     console.log('[preload] Bangumi Load');
   }
 
   // 缩放控制
-  if (!isAv(url) && !isBangumi(url)) {
+  if (!is.Av(url) && !is.Bangumi(url)) {
     ipc.send('video-off');
   } else {
     ipc.send('video-on');

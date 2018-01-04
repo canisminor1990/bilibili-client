@@ -1,6 +1,20 @@
+@import 'import';
 html,
 body,
 :global(#root) {
   height: 100%;
   overflow: hidden;
+}
+body {
+  font-family: $font-family;
+}
+
+a:focus {
+  text-decoration: none;
+}
+*:focus {
+  outline: none;
+}
+* {
+  -webkit-font-smoothing: antialiased;
 }

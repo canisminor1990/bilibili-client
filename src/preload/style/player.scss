@@ -1,0 +1,50 @@
+@import 'import';
+#preload {
+  .bilibili-player-video-btn-fullscreen,
+  .bilibili-player-video-btn-widescreen {
+    display: none !important;
+  }
+  #selectPart {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #99a2aa;
+    font-weight: 800;
+    cursor: pointer;
+    &:hover {
+      background-color: #f4f5f7;
+      color: #6d757a;
+    }
+  }
+
+  .bilibili-player-video-control {
+    display: flex;
+  }
+  .bilibili-player-video-progress {
+    flex: 1;
+    width: auto;
+  }
+  .bilibili-player-danmaku-setting-lite-panel {
+    display: none;
+  }
+  @media (max-width: 480px) {
+    .bilibili-player-video-btn-repeat,
+    .bilibili-player-video-btn-quality,
+    .bilibili-player-video-btn-volume {
+      display: none !important;
+    }
+    .bilibili-player-video-control {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      z-index: 999;
+      opacity: 0 !important;
+      transition: 0.3s ease-in-out;
+      &:hover {
+        opacity: 1 !important;
+      }
+    }
+  }
+}
