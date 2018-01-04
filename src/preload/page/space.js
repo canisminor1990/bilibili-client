@@ -24,7 +24,8 @@ export function style() {
   // language=SCSS
   AddStyle(`
 		.index__banner__M-space-banner- img,
-		.index__exp__M-space-info- {
+		.index__exp__M-space-info-,
+        .index__call__M-space-info- {
 			display: none !important;
 		}
 		.index__personal__M-space-personal- {
@@ -38,6 +39,10 @@ export function style() {
 			top: -4rem !important;
 			border: 3px solid #fff;
 			box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+		}
+        .index__big__M-space-info- {
+		    left: 9rem !important;
+		    top: -1.8rem !important;
 		}
 		.index__divider__M-space- {
 			background: #f25d8e;
