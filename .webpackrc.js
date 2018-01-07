@@ -27,6 +27,7 @@ export default {
 	],
 	externals          : {
 		'electron': 'require("electron")',
+		'electron-drag': 'require("electron-drag")',
 	},
 	env                : {
 		development: {

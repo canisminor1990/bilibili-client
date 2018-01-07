@@ -9,38 +9,48 @@
   z-index: 20;
   height: $navHeight;
 }
-.macDrag {
+.macDragFix {
   -webkit-app-region: drag;
+}
+.drabar {
+  -webkit-app-region: drag;
+  height: 100%;
+  flex: 1;
 }
 .navbarView {
   background: $c-primary;
-  padding: 0 0.5rem;
   transition: 0.3s ease-in-out;
   width: 100%;
   height: 100%;
 }
-.navbarAnimation {
+.inVideo {
   &:hover {
     .navbarView {
-      transform: translate3d(0, 0, 0);
+      opacity: 1;
     }
   }
+
   .navbarView {
-    transform: translate3d(0, -$navHeight, 0);
+    opacity: 0;
+    background: transparent;
+  }
+  .headerBar {
+    background: linear-gradient(45deg, #000, transparent);
+  }
+  .subBar {
+    display: none;
   }
 }
+
 .headerBar {
   display: flex;
   align-items: center;
   height: 1.5rem;
   position: relative;
-}
-.drag {
-  -webkit-app-region: drag;
-  height: 100%;
-  flex: 1;
+  padding: 0 0.5rem;
 }
 .subBar {
+  padding: 0 0.5rem;
   cursor: default;
   display: flex;
   align-items: center;

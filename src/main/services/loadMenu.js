@@ -24,14 +24,14 @@ export default win => {
         { type: 'separator' },
         {
           label: '🛠 DevTool - Main Window',
-          accelerator: 'CmdOrCtrl+M',
+          accelerator: 'CmdOrCtrl+1',
           click() {
             win.webContents.openDevTools();
           },
         },
         {
           label: '🛠 DevTool - Webview',
-          accelerator: 'CmdOrCtrl+W',
+          accelerator: 'CmdOrCtrl+2',
           click() {
             win.webContents.send('webview-devtool');
           },

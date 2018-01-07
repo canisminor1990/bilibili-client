@@ -29,6 +29,7 @@
       align-items: center;
       justify-content: center;
       box-shadow: $bar-shadow;
+      z-index: 999;
     }
   }
   #plist {
@@ -40,12 +41,14 @@
     padding: 0;
     display: flex;
     flex-direction: column;
+    position: relative;
     > a,
     .curPage {
       display: block;
       margin: 0;
-      width: auto;
+      width: 100%;
       flex: 1;
+      max-height: 3rem;
       height: 3rem;
       min-height: 3rem;
       padding: 0 1rem;
@@ -56,6 +59,9 @@
       border-color: rgba(#000, 0.08);
       border-bottom: 1px solid rgba(#000, 0.08);
       line-height: 1;
+    }
+    > a {
+      background: transparent;
     }
     .curPage {
       cursor: pointer;
