@@ -26,7 +26,7 @@
 		"pack:base": "electron-packager ./app bilibili --arch=x64 --out ./dist --icon=./build/icon --overwrite --asar --prune",
 		"pack:win": "yarn pack:base --platform=win32",
 		"pack:osx": "yarn pack:base --platform=darwin",
-		"publish": "bash ./publish.sh"
+		"publish": "cd ./dist && zip -r bilibili.mac.zip bilibili-darwin-x64 && zip -r bilibili.win.zip bilibili-win32-x64 && open ."
 	},
 	"pre-commit": [
 		"lint"

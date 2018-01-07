@@ -5,7 +5,8 @@ export default {
 	entry              : './src/renderer/index.js',
 	outputPath         : './app/pages',
 	define             : {
-		'$dirname': __dirname
+		'$dirname': __dirname,
+		'$isDev'  : process.env.NODE_ENV === 'development'
 	},
 	disableCSSModules  : false,
 	html               : {
@@ -26,8 +27,8 @@ export default {
 		['import', {libraryName: 'antd', libraryDirectory: 'es', style: true}]
 	],
 	externals          : {
-		'electron': 'require("electron")',
-		'electron-drag': 'require("electron-drag")',
+		'electron' : 'require("electron")',
+		'navigator': 'navigator'
 	},
 	env                : {
 		development: {

@@ -1,7 +1,7 @@
 import { Log } from '../utils';
 import chalk from 'chalk';
 import { shell, dialog } from 'electron';
-import appData from '../../../package.json';
+import appData from '../../../app/package.json';
 import fetch from 'electron-fetch';
 
 export default () => {

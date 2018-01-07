@@ -14,16 +14,14 @@ export default class extends Component {
 
     return (
       <div className={NavbarClass}>
-        <div className={style.navbarView}>
-          <div className={style.headerBar}>
-            {header}
-            <div className={style.drabar} />
-          </div>
-          <div className={style.subBar}>
-            <div className={style.left}>{left}</div>
-            {center}
-            <div className={style.right}>{right}</div>
-          </div>
+        <div className={style.headerBar}>
+          {header}
+          <div className={style.drabar} />
+        </div>
+        <div className={style.subBar}>
+          <div className={style.left}>{left}</div>
+          {center}
+          <div className={style.right}>{right}</div>
         </div>
       </div>
     );

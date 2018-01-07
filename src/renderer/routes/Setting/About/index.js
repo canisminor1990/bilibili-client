@@ -1,4 +1,4 @@
-import AppData from '../../../../../package.json';
+import AppData from '../../../../../app/package.json';
 import { ipcRenderer as ipc } from 'electron';
 import style from './index.scss';
 

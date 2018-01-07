@@ -1,6 +1,6 @@
 import classnames from 'classnames/bind';
 import { join } from 'path';
-import { isDev, UserAgent } from '../../utils';
+import { UserAgent } from '../../utils';
 import style from './index.scss';
 
 export default ({ loading }) => {
@@ -12,7 +12,7 @@ export default ({ loading }) => {
       className={classnames.bind(style)('webview', { loading: loading })}
       src="https://m.bilibili.com/index.html"
       useragent={UserAgent.mobile}
-      preload={isDev ? devPath : pubPath}
+      preload={$isDev ? devPath : pubPath} // eslint-disable-line
       disablewebsecurity="true"
     />
   );
