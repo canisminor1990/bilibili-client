@@ -25,18 +25,9 @@ export default {
 		'lodash',
 		['import', {libraryName: 'antd', libraryDirectory: 'es', style: true}]
 	],
-	externals          : [
-		function (context, request, callback) {
-			let isExternal = false;
-			const load     = [
-				'electron'
-			];
-			if (load.includes(request)) {
-				isExternal = `require("${request}")`;
-			}
-			callback(null, isExternal);
-		}
-	],
+	externals          : {
+		'electron': 'require("electron")',
+	},
 	env                : {
 		development: {
 			extraBabelPlugins: [

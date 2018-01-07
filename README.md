@@ -63,7 +63,7 @@
 
 ### Dev
 
-> 因为采用 [Two-Package.json Structure](https://www.electron.build/tutorials/two-package-structure)，需要安装二次依赖
+> `$ yarn root` 因为采用 [Two-Package.json Structure](https://www.electron.build/tutorials/two-package-structure)，需要安装二次依赖
 
 ```bash
 # 窗口一：watch roadhog => pages / webpack => main
