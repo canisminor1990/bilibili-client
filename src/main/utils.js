@@ -19,6 +19,6 @@ const Log = (str, ...other) => {
   }
 };
 
-const Platform = () => (navigator.platform.indexOf('Mac') > -1 ? 'mac' : 'win');
+const Platform = navigator.platform.indexOf('Mac') > -1 ? 'mac' : 'win';
 
 export { Log, Platform };

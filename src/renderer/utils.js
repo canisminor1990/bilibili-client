@@ -11,7 +11,7 @@ const Log = msg => {
   if (isDev) ipc.send('console-msg', msg);
 };
 
-const Platform = () => (navigator.platform.indexOf('Mac') > -1 ? 'mac' : 'win');
+const Platform = navigator.platform.indexOf('Mac') > -1 ? 'mac' : 'win';
 
 const isDev = process.env.NODE_ENV === 'development';
 
