@@ -7,7 +7,7 @@ export default ({ app, history }) => {
     <Router history={history}>
       <Switch>
         <App>
-          <Route exact path={window.rooturl} component={Main} />
+          <Route path="/" component={Main} />
         </App>
       </Switch>
     </Router>
