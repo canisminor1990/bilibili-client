@@ -22,7 +22,7 @@
 		"build:main": "webpack --config ./webpack.config.babel.js",
 		"lint": "lint-staged",
 		"lint:es": "eslint --fix --ext .js src",
-		"pack": "pack:osx && yarn pack:win",
+		"pack": "yarn pack:osx && yarn pack:win",
 		"pack:base": "electron-packager ./app bilibili --arch=x64 --out ./dist --icon=./build/icon --overwrite --asar --prune",
 		"pack:win": "yarn pack:base --platform=win32",
 		"pack:osx": "yarn pack:base --platform=darwin",
