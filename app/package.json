@@ -1,6 +1,6 @@
 {
  "name": "bilibili-client",
- "version": "1.0.2",
+ "version": "1.0.3",
  "description": "📺 Mini-Client of Bilibili.",
  "productName": "Bilibili Client",
  "main": "dist/main.js",
