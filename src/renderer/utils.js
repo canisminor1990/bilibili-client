@@ -13,6 +13,6 @@ const Log = msg => {
 
 const Platform = () => (navigator.platform.indexOf('Mac') > -1 ? 'mac' : 'win');
 
-const isDev = () => process.env.NODE_ENV === 'development';
+const isDev = process.env.NODE_ENV === 'development';
 
 export { UserAgent, AvPrefix, Log, Platform, isDev };
