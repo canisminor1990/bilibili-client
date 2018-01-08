@@ -3,19 +3,21 @@ import path from 'path';
 
 const outputPath = path.join(__dirname, 'app', 'dist');
 export default {
-	target : 'electron',
-	entry  : {
+	target   : 'electron',
+	entry    : {
 		main   : './src/main/index.js',
 		preload: './src/preload/index.js'
 	},
-	output : {
+	output   : {
 		path    : outputPath,
 		filename: '[name].js'
 	},
-	externals(context, request, callback) {
-		callback(null, request.charAt(0) === '.' ? false : `require("${request}")`);
-	},
-	module : {
+	externals: [
+		(context, request, callback) => {
+			callback(null, request.charAt(0) === '.' ? false : `require("${request}")`);
+		}
+	],
+	module   : {
 		rules: [
 			{
 				test   : /\.js$/,
@@ -28,7 +30,7 @@ export default {
 				use    : [
 					{
 						loader: 'css-loader'
-					},  {
+					}, {
 						loader : 'sass-loader',
 						options: {
 							includePaths: ['node_modules', 'src/preload/style']
@@ -38,7 +40,7 @@ export default {
 			}
 		]
 	},
-	plugins: [
+	plugins  : [
 		new webpack.DefinePlugin({$dirname: '__dirname'})
 	]
 };

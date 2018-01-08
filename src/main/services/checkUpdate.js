@@ -12,8 +12,12 @@ export default () => {
       .then(body => {
         const Body = JSON.parse(body);
         const newVersion = Body['tag_name'];
-        Log(`[app][check-update] Local: ${chalk.green(version)} Repo: ${chalk.green(newVersion)}`);
-        if (versionfunegt(newVersion, version)) {
+        Log(
+          `[app][check-update] Local: ${chalk.green(version)} Repo: ${chalk.green(
+            newVersion
+          )} Check: ${compare(version, newVersion)}`
+        );
+        if (compare(version, newVersion)) {
           dialog.showMessageBox(
             null,
             {
@@ -31,22 +35,23 @@ export default () => {
   } catch (e) {}
 };
 
-const versionfunegt = (ver1, ver2) => {
-  ver1 = ver1.replace('v', '');
-  ver2 = ver2.replace('v', '');
-  const version1pre = parseFloat(ver1);
-  const version2pre = parseFloat(ver2);
-  const version1next = ver1.replace(version1pre + '.', '');
-  const version2next = ver2.replace(version2pre + '.', '');
-  if (version1pre > version2pre) {
-    return true;
-  } else if (version1pre <= version2pre) {
-    return false;
-  } else {
-    if (version1next > version2next) {
-      return true;
-    } else {
-      return false;
+const compare = (curV, reqV) => {
+  if (curV && reqV) {
+    const arr1 = curV.replace('v', '').split('.');
+    const arr2 = reqV.replace('v', '').split('.');
+    const minLength = Math.min(arr1.length, arr2.length);
+    let position = 0;
+    let diff = 0;
+    while (
+      position < minLength &&
+      (diff = parseInt(arr1[position]) - parseInt(arr2[position])) === 0
+    ) {
+      position++;
     }
+    diff = diff !== 0 ? diff : arr1.length - arr2.length;
+    return diff < 0;
+  } else {
+    Log('[app][check-update] 版本号不能为空');
+    return false;
   }
 };

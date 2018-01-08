@@ -12,7 +12,7 @@ Log('[app] start 😘');
 if (is.dev()) debug();
 
 app.on('ready', () => {
-  Log('[app][platform]', process.platform, 1, 2, 3);
+  Log('[app][platform]', process.platform);
   application.init();
   // 加载 devtools extension
   if (is.dev()) {
