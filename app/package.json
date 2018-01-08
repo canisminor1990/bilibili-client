@@ -4,13 +4,16 @@
  "description": "📺 Mini-Client of Bilibili.",
  "productName": "Bilibili Client",
  "main": "dist/main.js",
+ "license": "MIT",
  "author": {
   "name": "CanisMinor",
-  "email": "i@canisminor.cc"
+  "email": "i@canisminor.cc",
+  "url"  : "https://canisminor.cc/"
  },
  "repository": {
   "type": "git",
-  "url": "https://github.com/canisminor1990/bilibili-client.git"
+  "url": "https://github.com/canisminor1990/bilibili-client.git",
+  "coding": "git@git.coding.net:canisminor1990/bilibili-client.git"
  },
  "bugs": {
   "url": "https://github.com/canisminor1990/bilibili-client/issues"
@@ -24,6 +27,5 @@
   "electron-is": "^2.4.0",
   "fancy-log": "^1.3.2",
   "lodash": "^4.17.4"
- },
- "license": "MIT"
+ }
 }

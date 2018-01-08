@@ -1,12 +1,16 @@
 {
+	"title": "bilibili-client",
+	"description": "📺 Mini-Client of Bilibili.",
 	"author": {
 		"name": "CanisMinor",
-		"email": "i@canisminor.cc"
+		"email": "i@canisminor.cc",
+		"url"  : "https://canisminor.cc/"
 	},
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/canisminor1990/bilibili-client.git"
+		"url": "https://github.com/canisminor1990/bilibili-client.git",
+		"coding": "git@git.coding.net:canisminor1990/bilibili-client.git"
 	},
 	"bugs": {
 		"url": "https://github.com/canisminor1990/bilibili-client/issues"
