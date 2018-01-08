@@ -2,10 +2,10 @@ import { app, BrowserWindow } from 'electron';
 import is from 'electron-is';
 import { join } from 'path';
 import { Log } from './utils';
+import Configs from './configs';
 import debug from 'electron-debug';
 import * as application from './services/app';
 import * as window from './services/window';
-import * as config from './configs/config';
 
 Log('[app] start 😘');
 
@@ -44,6 +44,4 @@ global.services = {
   window,
 };
 
-global.configs = {
-  config,
-};
+global.configs = Configs;

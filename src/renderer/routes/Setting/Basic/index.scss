@@ -1,10 +1,36 @@
 @import 'import';
 
 .box {
-  height: 30rem;
-  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.cell {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.title {
+  height: 2rem;
+  width: 8rem;
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: #999;
+  margin-right: 0.5rem;
+}
+
+.btnGroup {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  border-radius: 3rem;
+  margin-bottom: 0.8rem;
+  &:first-child {
+    border: none;
+    background: linear-gradient(45deg, $c-primary, lighten($c-primary, 10%));
+    box-shadow: 0 4px 8px rgba($c-primary, 0.15);
+  }
 }

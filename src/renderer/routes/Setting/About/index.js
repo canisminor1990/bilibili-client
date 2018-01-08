@@ -8,7 +8,7 @@ export default () => {
   const Github = () => Link('https://github.com/canisminor1990/bilibili-client');
   return (
     <div>
-      <div className={style.band}>
+      <div onClick={Github} className={style.band}>
         <img className={style.logo} alt="logo" src="img/icon.png" />
         <div className={style.text}>Bilibili Mini-Client</div>
         <div className={style.version}>
@@ -23,7 +23,6 @@ export default () => {
           MIT开源于<a onClick={Github}>Github</a>
         </div>
       </div>
-      <div className={style.copyright}>Copyright © ️CanisMinor 2018</div>
     </div>
   );
 };

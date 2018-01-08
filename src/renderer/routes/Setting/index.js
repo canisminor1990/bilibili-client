@@ -11,7 +11,7 @@ const State = state => ({ a: 1 });
 const Setting = () => {
   return (
     <div className={style.view}>
-      <Tabs defaultActiveKey="2">
+      <Tabs defaultActiveKey="1">
         <TabPane tab="常规" key="1">
           <div className={style.content}>
             <Baisc />
@@ -23,6 +23,7 @@ const Setting = () => {
           </div>
         </TabPane>
       </Tabs>
+      <div className={style.copyright}>Copyright © ️ CanisMinor 2018</div>
     </div>
   );
 };

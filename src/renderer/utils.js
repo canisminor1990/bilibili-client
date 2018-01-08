@@ -1,4 +1,4 @@
-import { ipcRenderer as ipc } from 'electron';
+import { ipcRenderer as ipc, remote } from 'electron';
 
 const UserAgent = {
   desktop: 'bilimini Desktop like Mozilla/233 (Chrome and Safari)',
@@ -8,9 +8,10 @@ const AvPrefix = 'https://www.bilibili.com/video/av';
 
 const Log = msg => {
   console.log(msg);
-  if ($isDev) ipc.send('console-msg', msg); // eslint-disable-line
+	if ($isDev) ipc.send('console-msg', msg); // eslint-disable-line
 };
 
 const Platform = navigator.platform.indexOf('Mac') > -1 ? 'mac' : 'win';
+const Configs = remote.getGlobal('configs');
 
-export { UserAgent, AvPrefix, Log, Platform };
+export { UserAgent, AvPrefix, Log, Platform, Configs };

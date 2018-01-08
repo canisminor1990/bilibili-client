@@ -21,3 +21,17 @@
     box-shadow: $bar-shadow;
   }
 }
+.copyright {
+  color: #ccc;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4em;
+  font-size: 0.8rem;
+  position: fixed;
+  background: #fff;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
