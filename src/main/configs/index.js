@@ -6,11 +6,17 @@ const Store = new ElectronStore();
 const DefaultConfig = {
   windowsSize: [375, 650],
   playerSize: [375, 210],
-  opacity: 1,
+  transparent: false,
+  opacity: 100,
 };
 
 const Configs = {
-  default: DefaultConfig,
+  defaults: {
+    windowsSize: [375, 650],
+    playerSize: [375, 210],
+    transparent: false,
+    opacity: 100,
+  },
   store: _.assign(DefaultConfig, Store.store),
   restore: () => (Store.store = DefaultConfig),
   get: key => {
@@ -21,7 +27,8 @@ const Configs = {
   set: (key, value) => {
     if (typeof key === 'object') {
       Store.set(key);
-      Log(`[app][setting] set ${key}`);
+      Log(`[app][setting] set ${JSON.stringify(key)}`);
+      Log(`[app][setting] store ${JSON.stringify(Configs.store)}`);
     } else {
       if (typeof value === 'object') {
         const oldConfig = Store.has(key) ? Store.get(key) : {};
@@ -29,7 +36,8 @@ const Configs = {
       } else {
         Store.set(key, value);
       }
-      Log(`[app][setting] set ${key}: ${value}`);
+      Log(`[app][setting] set ${key}: ${JSON.stringify(value)}`);
+      Log(`[app][setting] store ${JSON.stringify(Configs.store)}`);
     }
   },
   delete: key => {

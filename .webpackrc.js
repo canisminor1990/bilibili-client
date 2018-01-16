@@ -22,7 +22,6 @@ export default {
 		pxtorem({rootValue: 16})
 	],
 	extraBabelPlugins  : [
-		'transform-decorators-legacy',
 		'lodash',
 		['import', {libraryName: 'antd', libraryDirectory: 'es', style: true}]
 	],

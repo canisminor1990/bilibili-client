@@ -1,13 +1,11 @@
 {
 	"presets": [
-		"env",
-		"stage-0"
+		"@babel/env",
+		"@babel/stage-0"
 	],
 	"plugins": [
+		"@babel/transform-runtime",
 		"add-module-exports",
-		"transform-runtime",
-		"transform-decorators-legacy",
-		"transform-class-properties",
 		"lodash"
 	]
 }

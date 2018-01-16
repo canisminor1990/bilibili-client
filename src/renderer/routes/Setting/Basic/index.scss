@@ -9,11 +9,21 @@
 .cell {
   display: flex;
   margin-bottom: 1rem;
+  align-items: center;
+  > span {
+    width: auto;
+    flex: 1;
+    > span {
+      margin-left: 0.5rem;
+      font-size: 0.8rem;
+      color: #ccc;
+    }
+  }
 }
 
 .title {
   height: 2rem;
-  width: 8rem;
+  width: 6rem;
   display: flex;
   align-items: center;
   margin-right: 0.5rem;

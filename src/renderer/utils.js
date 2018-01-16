@@ -14,4 +14,9 @@ const Log = msg => {
 const Platform = navigator.platform.indexOf('Mac') > -1 ? 'mac' : 'win';
 const Configs = remote.getGlobal('configs');
 
-export { UserAgent, AvPrefix, Log, Platform, Configs };
+const UpdateOpacity = data => {
+  let opacity = data || Configs.get('opacity');
+  document.body.style.opacity = opacity / 100;
+};
+
+export { UserAgent, AvPrefix, Log, Platform, Configs, UpdateOpacity };

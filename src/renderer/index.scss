@@ -7,6 +7,8 @@ body,
 }
 body {
   font-family: $font-family;
+  background: transparent;
+  backdrop-filter: blur(10px);
 }
 
 a:focus {

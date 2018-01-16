@@ -2,9 +2,6 @@ import { Log } from '../utils';
 import Configs from '../configs';
 import { ipcMain as ipc, shell } from 'electron';
 
-let windowsSize = Configs.get('windowsSize');
-let playerSize = Configs.get('playerSize');
-
 export default win => {
   // 设置
   ipc.on('config-set', (event, data) => {
@@ -25,14 +22,17 @@ export default win => {
   });
   // 界面尺寸
   ipc.on('video-on', () => {
+    let playerSize = Configs.get('playerSize');
     win.setSize(playerSize[0], playerSize[1], true);
     win.setResizable(true);
   });
   ipc.on('video-off', () => {
+    let windowsSize = Configs.get('windowsSize');
     win.setSize(windowsSize[0], windowsSize[1], true);
     win.setResizable(false);
   });
   ipc.on('resize', () => {
+    let playerSize = Configs.get('playerSize');
     playerSize = win.getSize();
     Log('[app][resize]', playerSize);
   });

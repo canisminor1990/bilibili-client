@@ -4,7 +4,7 @@ import router from './router';
 import trigger from './models/trigger';
 import history from './models/history';
 import { message } from 'antd';
-import { Log } from './utils';
+import { Log, UpdateOpacity } from './utils';
 import './index.scss';
 
 const ERROR_MSG_DURATION = 3; // 3 秒
@@ -29,3 +29,4 @@ app.router(router);
 
 // 5. Start
 app.start('#root');
+UpdateOpacity();
