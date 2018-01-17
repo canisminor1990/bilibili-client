@@ -2,6 +2,7 @@
 
 ![](https://github.com/canisminor1990/bilibili-client/blob/master/doc/preview-0.png?raw=true)
 
+[![](https://img.shields.io/github/license/canisminor1990/bilibili-client.svg)](https://github.com/canisminor1990/bilibili-client/blob/master/LICENSE)
 [![](https://img.shields.io/github/release/canisminor1990/bilibili-client.svg)](https://github.com/canisminor1990/bilibili-client)
 [![](https://img.shields.io/github/downloads/canisminor1990/bilibili-client/total.svg)](https://github.com/canisminor1990/bilibili-client/releases)
 
@@ -95,7 +96,7 @@ $ yarn pack
 
 ## License
 
-- [MIT](https://tldrlegal.com/license/mit-license)
+- [MIT](https://github.com/canisminor1990/bilibili-client/blob/master/LICENSE)
 
 ## Copyright
 
