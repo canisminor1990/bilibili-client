@@ -45,3 +45,5 @@ export default {
 	},
 	ignoreMomentLocale : true
 };
+
+
